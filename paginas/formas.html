@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formas Primárias e Materiais - Portal 3D</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .svg-forma {
+            width: 100%;
+            max-width: 240px;
+            height: 200px;
+            margin: 1rem auto;
+            display: block;
+            background-color: #181818;
+            border: 2px solid #444;
+            border-radius: 8px;
+            padding: 10px;
+        }
+        .grid-formas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 20px;
+            margin-top: 1.5rem;
+        }
+        .card-forma {
+            background-color: #303030;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #444;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .card-forma:hover {
+            transform: translateY(-4px);
+            border-color: #ea7600;
+        }
+        .card-forma h3 {
+            color: #ea7600;
+            margin-top: 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Portal <span>3D</span></div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="modelagem3d.html">Modelagem & IA</a></li>
+                <li><a href="fundamentos.html">Fundamentos</a></li>
+                <li><a href="mesh.html">Malha (Mesh)</a></li>
+                <li><a href="formas.html" class="ativo">Formas Primárias</a></li>
+                <li><a href="escultura.html">Escultura Digital</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>As 9 Formas Primárias (Objetos Mesh no Blender)</h2>
+            <p>Toda modelagem tridimensional complexa começa a partir de formas geométricas primitivas, acessadas no Blender através do atalho <strong>Shift + A</strong> ou pelo menu <strong>Add &rarr; Mesh</strong>:</p>
+
+            <div class="grid-formas">
+                <!-- 1. Plano (Plane) -->
+                <div class="card-forma">
+                    <h3>1. Plano (Plane)</h3>
+                    <svg class="svg-forma" viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
+                        <polygon points="40,100 100,60 160,100 100,140" fill="#ea7600" fill-opacity="0.25" stroke="#ea7600" stroke-width="2.5"/>
+                        <circle cx="40" cy="100" r="3.5" fill="#fff"/>
+                        <circle cx="100" cy="60" r="3.5" fill="#fff"/>
+                        <circle cx="160" cy="100" r="3.5" fill="#fff"/>
+                        <circle cx="100" cy="140" r="3.5" fill="#fff"/>
+                    </svg>
+                    <p><strong>Definição:</strong> Superfície bidimensional plana composta por 4 vértices, 4 arestas e 1 única face quadrada.</p>
+                    <p><strong>Aplicações:</strong> Chão de cenários, paredes, espelhos, telas, folhas de papel e bases arquitetônicas.</p>
+                </div>
+
+                <!-- 2. Cubo (Cube) -->
+                <div class="card-forma">
+                    <h3>2. Cubo (Cube)</h3>
+                    <svg class="svg-forma" viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
+                        <polygon points="100,25 155,55 155,115 100,145 45,115 45,55" fill="#ea7600" fill-opacity="0.2" stroke="#ea7600" stroke-width="2.5"/>
+                        <polyline points="45,55 100,85 155,55" fill="none" stroke="#ea7600" stroke-width="2.5"/>
+                        <line x1="100" y1="85" x2="100" y2="145" stroke="#ea7600" stroke-width="2.5"/>
+                        <line x1="100" y1="25" x2="100" y2="85" stroke="#888" stroke-width="1" stroke-dasharray="3,3"/>
+                        <line x1="45" y1="115" x2="100" y2="85" stroke="#888" stroke-width="1" stroke-dasharray="3,3"/>
+                        <line x1="155" y1="115" x2="100" y2="85" stroke="#888" stroke-width="1" stroke-dasharray="3,3"/>
+                        <circle cx="100" cy="25" r="3" fill="#fff"/><circle cx="155" cy="55" r="3" fill="#fff"/>
+                        <circle cx="155" cy="115" r="3" fill="#fff"/><circle cx="100" cy="145" r="3" fill="#fff"/>
+                        <circle cx="45" cy="115" r="3" fill="#fff"/><circle cx="45" cy="55" r="3" fill="#fff"/>
+                        <circle cx="100" cy="85" r="3" fill="#fff"/>
+                    </svg>
+                    <p><strong>Definição:</strong> Malha fechada tridimensional com 6 faces quadradas, 12 arestas e 8 vértices.</p>
+                    <p><strong>Aplicações:</strong> Prédios, móveis, caixas, veículos e blocagem inicial de personagens.</p>
+                </div>
+
+                <!-- 3. Círculo (Circle) -->
+                <div class="card-forma">
+                    <h3>3. Círculo (Circle)</h3>
+                    <svg class="svg-forma" viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="100" cy="85" rx="60" ry="35" fill="#ea7600" fill-opacity="0.15" stroke="#ea7600" stroke-width="2.5"/>
+                        <circle cx="160" cy="85" r="3" fill="#fff"/><circle cx="142" cy="110" r="3" fill="#fff"/>
+                        <circle cx="100" cy="120" r="3" fill="#fff"/><circle cx="58" cy="110" r="3" fill="#fff"/>
+                        <circle cx="40" cy="85" r="3" fill="#fff"/><circle cx="58" cy="60" r="3" fill="#fff"/>
+                        <circle cx="100" cy="50" r="3" fill="#fff"/><circle cx="142" cy="60" r="3" fill="#fff"/>
+                    </svg>
+                    <p><strong>Definição:</strong> Malha plana bidimensional formada por um anel de vértices conectados em loop (padrão de 32 vértices, sem face interna inicial).</p>
+                    <p><strong>Aplicações:</strong> Base para pratos, tampas, moedas, engrenagens e furos circulares.</p>
+                </div>
+
+                <!-- 4. Esfera UV (UV Sphere) -->
+                <div class="card-forma">
+                    <h3>4. Esfera UV (UV Sphere)</h3>
+                    <svg class="svg-forma" viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="100" cy="80" r="55" fill="#ea7600" fill-opacity="0.2" stroke="#ea7600" stroke-width="2.5"/>
+                        <ellipse cx="100" cy="80" rx="55" ry="18" fill="none" stroke="#ea7600" stroke-width="1.5"/>
+                        <ellipse cx="100" cy="60" rx="48" ry="13" fill="none" stroke="#ea7600" stroke-width="1.2"/>
+                        <ellipse cx="100" cy="100" rx="48" ry="13" fill="none" stroke="#ea7600" stroke-width="1.2"/>
+                        <ellipse cx="100" cy="80" rx="22" ry="55" fill="none" stroke="#ea7600" stroke-width="1.5"/>
+                        <ellipse cx="100" cy="80" rx="42" ry="55" fill="none" stroke="#ea7600" stroke-width="1.2"/>
+                        <line x1="100" y1="25" x2="100" y2="135" stroke="#ea7600" stroke-width="1.5"/>
+                    </svg>
+                    <p><strong>Definição:</strong> Esfera composta por anéis horizontais (paralelos) e segmentos verticais (meridianos) que convergem nos dois polos.</p>
+                    <p><strong>Aplicações:</strong> Planetas, globos, olhos de personagens, bolas esportivas e lâmpadas.</p>
+                </div>
+
+                <!-- 5. Esfera Icosaédrica (Ico Sphere) -->
+                <div class="card-forma">
+                    <h3>5. Esfera Icosaédrica (Ico Sphere)</h3>
+                    <svg class="svg-forma" viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
+                        <polygon points="100,25 148,52 148,108 100,135 52,108 52,52" fill="#ea7600" fill-opacity="0.2" stroke="#ea7600" stroke-width="2.5"/>
+                        <polygon points="100,25 130,68 70,68" fill="none" stroke="#ea7600" stroke-width="1.8"/>
+                        <polygon points="100,135 130,92 70,92" fill="none" stroke="#ea7600" stroke-width="1.8"/>
+                        <polyline points="52,52 70,68 52,108 70,92 100,135" fill="none" stroke="#ea7600" stroke-width="1.8"/>
+                        <polyline points="148,52 130,68 148,108 130,92 100,135" fill="none" stroke="#ea7600" stroke-width="1.8"/>
+                        <line x1="70" y1="68" x2="70" y2="92" stroke="#ea7600" stroke-width="1.8"/>
+                        <line x1="130" y1="68" x2="130" y2="92" stroke="#ea7600" stroke-width="1.8"/>
+                        <line x1="70" y1="68" x2="130" y2="92" stroke="#ea7600" stroke-width="1.5"/>
+                    </svg>
+                    <p><strong>Definição:</strong> Esfera formada exclusivamente por triângulos equiláteros distribuídos de forma uniforme por toda a superfície.</p>
+                    <p><strong>Aplicações:</strong> Pedras, asteroides, cristais, efeitos de partículas e terrenos orgânicos.</p>
+                </div>
+
+                <!-- 6. Cilindro (Cylinder) -->
+                <div class="card-forma">
+                    <h3>6. Cilindro (Cylinder)</h3>
+                    <svg class="svg-forma" viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M55,45 L55,115 A45,18 0 0,0 145,115 L145,45 Z" fill="#ea7600" fill-opacity="0.2" stroke="#ea7600" stroke-width="2.5"/>
+                        <ellipse cx="100" cy="45" rx="45" ry="18" fill="#ea7600" fill-opacity="0.3" stroke="#ea7600" stroke-width="2.5"/>
+                        <path d="M55,115 A45,18 0 0,1 145,115" fill="none" stroke="#ea7600" stroke-width="1.2" stroke-dasharray="4,4"/>
+                        <line x1="80" y1="61" x2="80" y2="131" stroke="#ea7600" stroke-width="1.2"/>
+                        <line x1="100" y1="63" x2="100" y2="133" stroke="#ea7600" stroke-width="1.2"/>
+                        <line x1="120" y1="61" x2="120" y2="131" stroke="#ea7600" stroke-width="1.2"/>
+                    </svg>
+                    <p><strong>Definição:</strong> Malha tubular fechada com duas tampas circulares paralelas conectadas por faces retangulares laterais.</p>
+                    <p><strong>Aplicações:</strong> Canos, colunas, copos, garrafas, rodas, pilhas e troncos de árvores.</p>
+                </div>
+
+                <!-- 7. Cone (Cone) -->
+                <div class="card-forma">
+                    <h3>7. Cone (Cone)</h3>
+                    <svg class="svg-forma" viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M100,25 L50,120 A50,18 0 0,0 150,120 Z" fill="#ea7600" fill-opacity="0.2" stroke="#ea7600" stroke-width="2.5"/>
+                        <path d="M50,120 A50,18 0 0,1 150,120" fill="none" stroke="#ea7600" stroke-width="1.2" stroke-dasharray="4,4"/>
+                        <line x1="100" y1="25" x2="75" y2="135" stroke="#ea7600" stroke-width="1.2"/>
+                        <line x1="100" y1="25" x2="100" y2="138" stroke="#ea7600" stroke-width="1.2"/>
+                        <line x1="100" y1="25" x2="125" y2="135" stroke="#ea7600" stroke-width="1.2"/>
+                        <circle cx="100" cy="25" r="3.5" fill="#fff"/>
+                    </svg>
+                    <p><strong>Definição:</strong> Malha com base circular que afunila continuamente até se encontrar em um único vértice no topo.</p>
+                    <p><strong>Aplicações:</strong> Telhados pontiagudos, pinheiros, chapéus de bruxa, funis e pontas de lanças.</p>
+                </div>
+
+                <!-- 8. Toroide (Torus) -->
+                <div class="card-forma">
+                    <h3>8. Toroide (Torus)</h3>
+                    <svg class="svg-forma" viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="100" cy="85" rx="62" ry="36" fill="#ea7600" fill-opacity="0.2" stroke="#ea7600" stroke-width="2.5"/>
+                        <ellipse cx="100" cy="85" rx="26" ry="13" fill="#181818" stroke="#ea7600" stroke-width="2.5"/>
+                        <ellipse cx="100" cy="85" rx="44" ry="24" fill="none" stroke="#ea7600" stroke-width="1.2" stroke-dasharray="4,3"/>
+                        <path d="M100,49 A18,12 0 0,1 100,72" fill="none" stroke="#ea7600" stroke-width="1.5"/>
+                        <path d="M100,98 A18,12 0 0,1 100,121" fill="none" stroke="#ea7600" stroke-width="1.5"/>
+                        <path d="M38,85 A18,12 0 0,1 74,85" fill="none" stroke="#ea7600" stroke-width="1.5"/>
+                        <path d="M126,85 A18,12 0 0,1 162,85" fill="none" stroke="#ea7600" stroke-width="1.5"/>
+                    </svg>
+                    <p><strong>Definição:</strong> Malha tridimensional em formato de anel oco, gerada pela rotação de um círculo em torno de um eixo.</p>
+                    <p><strong>Aplicações:</strong> Donuts, pneus, anéis, boias salva-vidas, pulseiras e elos de correntes.</p>
+                </div>
+
+                <!-- 9. Grade (Grid) / Malha -->
+                <div class="card-forma">
+                    <h3>9. Grade (Grid)</h3>
+                    <svg class="svg-forma" viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
+                        <polygon points="35,95 100,55 165,95 100,135" fill="#ea7600" fill-opacity="0.2" stroke="#ea7600" stroke-width="2.5"/>
+                        <line x1="51" y1="85" x2="116" y2="125" stroke="#ea7600" stroke-width="1.3"/>
+                        <line x1="67" y1="75" x2="132" y2="115" stroke="#ea7600" stroke-width="1.3"/>
+                        <line x1="84" y1="65" x2="149" y2="105" stroke="#ea7600" stroke-width="1.3"/>
+                        <line x1="116" y1="65" x2="51" y2="105" stroke="#ea7600" stroke-width="1.3"/>
+                        <line x1="132" y1="75" x2="67" y2="115" stroke="#ea7600" stroke-width="1.3"/>
+                        <line x1="149" y1="85" x2="84" y2="125" stroke="#ea7600" stroke-width="1.3"/>
+                    </svg>
+                    <p><strong>Definição:</strong> Plano subdividido em várias linhas e colunas de faces quadradas (quads), pronto para deformações.</p>
+                    <p><strong>Aplicações:</strong> Terrenos, montanhas, superfícies de água, ondas, tecidos e bandeiras.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Modelagem por Referência</h2>
+            <p>Modelar sem referências visuais leva a erros de escala e detalhes irreais. O processo profissional envolve:</p>
+            <ul>
+                <li><strong>Importância das Referências Visuais:</strong> Servem como guia fiel de anatomia, mecânica e estilo antes de iniciar o projeto.</li>
+                <li><strong>Observação de Formas:</strong> Decompor objetos complexos em formas primitivas básicas (ex: ver um carro como cubos e cilindros).</li>
+                <li><strong>Planejamento da Modelagem:</strong> Definir vistas ortográficas (frente, lado e topo) no Blender para manter a simetria.</li>
+                <li><strong>Comparação Final:</strong> Validar constantemente o modelo 3D em relação às imagens originais para ajustar proporções e silhueta.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Materiais e Texturas</h2>
+            <p>Após concluir a geometria, a aparência realista é construída através do sistema de sombreamento (Shading):</p>
+            <ul>
+                <li><strong>Materiais:</strong> Controlam como a luz reage ao objeto (cor base, metalicidade e aspereza).</li>
+                <li><strong>Texturas:</strong> Imagens 2D projetadas sobre a malha (mapeamento UV) para simular superfícies reais.</li>
+                <li><strong>Mapas (Maps):</strong> Arquivos específicos que simulam relevo sem criar geometria extra, como <em>Normal Map</em> (detalhes de profundidade), <em>Roughness Map</em> (áreas foscas ou brilhantes) e <em>Bump Map</em>.</li>
+                <li><strong>Realismo Visual e Aplicações:</strong> Essenciais em jogos, cinema e arquitetura para diferenciar concreto, pele humana, tecidos e metais desgastados.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projeto Integrador - Portal da Modelagem 3D © 2026</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

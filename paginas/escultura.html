@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escultura Digital - Portal 3D</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .ilustracao-box {
+            background-color: #1f1f1f;
+            border: 1px solid #3d3d3d;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        .ilustracao-box svg {
+            width: 100%;
+            max-width: 680px;
+            height: auto;
+            display: block;
+            margin: 0 auto 12px auto;
+        }
+        .legenda-ilustracao {
+            font-size: 0.9rem;
+            color: #aaaaaa;
+            margin-bottom: 0;
+        }
+        .etapas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-top: 1.2rem;
+        }
+        .etapa-card {
+            background-color: #2f2f2f;
+            border-left: 4px solid #ea7600;
+            padding: 1.2rem;
+            border-radius: 6px;
+        }
+        .etapa-card h4 {
+            color: #ea7600;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Portal <span>3D</span></div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="modelagem3d.html">Modelagem & IA</a></li>
+                <li><a href="fundamentos.html">Fundamentos</a></li>
+                <li><a href="mesh.html">Malha (Mesh)</a></li>
+                <li><a href="formas.html">Formas Primárias</a></li>
+                <li><a href="escultura.html" class="ativo">Escultura Digital</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Escultura Digital (Sculpting)</h2>
+            <p>A <strong>Escultura Digital</strong> é uma técnica de modelagem 3D que funciona como esculpir argila no mundo real. Em vez de mover vértices um por um, o artista utiliza pincéis digitais (<em>Brushes</em>) no <em>Sculpt Mode</em> do Blender para empurrar, puxar, suavizar e adicionar detalhes orgânicos a uma malha de alta densidade.</p>
+
+            <div class="ilustracao-box">
+                <svg viewBox="0 0 760 260" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <radialGradient id="argilaGrad" cx="40%" cy="35%" r="60%">
+                            <stop offset="0%" stop-color="#f2994a"/>
+                            <stop offset="55%" stop-color="#c85a17"/>
+                            <stop offset="100%" stop-color="#5c2406"/>
+                        </radialGradient>
+                        <radialGradient id="baseGrad" cx="45%" cy="35%" r="60%">
+                            <stop offset="0%" stop-color="#6e6e6e"/>
+                            <stop offset="100%" stop-color="#2c2c2c"/>
+                        </radialGradient>
+                    </defs>
+
+                    <!-- Fundo da area de trabalho -->
+                    <rect x="10" y="10" width="740" height="240" rx="10" fill="#171717" stroke="#333333"/>
+
+                    <!-- Etapa 1: Blocagem -->
+                    <g transform="translate(130, 120)">
+                        <ellipse cx="0" cy="-15" rx="45" ry="52" fill="url(#baseGrad)" stroke="#ea7600" stroke-width="1.5" stroke-dasharray="4,3"/>
+                        <ellipse cx="0" cy="48" rx="34" ry="22" fill="url(#baseGrad)" stroke="#ea7600" stroke-width="1.5" stroke-dasharray="4,3"/>
+                        <line x1="-45" y1="-15" x2="45" y2="-15" stroke="#ea7600" stroke-width="1" opacity="0.6"/>
+                        <line x1="0" y1="-67" x2="0" y2="70" stroke="#ea7600" stroke-width="1" opacity="0.6"/>
+                        <text x="0" y="95" fill="#e0e0e0" font-size="13" font-weight="bold" text-anchor="middle">1. Blocagem</text>
+                        <text x="0" y="112" fill="#999999" font-size="11" text-anchor="middle">Formas primitivas base</text>
+                    </g>
+
+                    <!-- Seta 1 -> 2 -->
+                    <path d="M 215 115 L 265 115" stroke="#ea7600" stroke-width="2.5"/>
+                    <polygon points="265,110 275,115 265,120" fill="#ea7600"/>
+
+                    <!-- Etapa 2: Formas Secundarias -->
+                    <g transform="translate(380, 120)">
+                        <path d="M -45 -25 C -48 -65, 48 -65, 45 -25 C 43 10, 32 32, 24 48 L -24 48 C -32 32, -43 10, -45 -25 Z" fill="url(#argilaGrad)" opacity="0.85"/>
+                        <!-- Arcos superciliares e macas do rosto -->
+                        <path d="M -30 -22 Q -15 -30, 0 -20 Q 15 -30, 30 -22" fill="none" stroke="#3b1603" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M -10 -18 L 0 8 L 10 -18" fill="none" stroke="#ffd2a6" stroke-width="2" opacity="0.7"/>
+                        <path d="M -18 22 Q 0 28, 18 22" fill="none" stroke="#3b1603" stroke-width="2.5" stroke-linecap="round"/>
+                        <text x="0" y="95" fill="#e0e0e0" font-size="13" font-weight="bold" text-anchor="middle">2. Formas Secundárias</text>
+                        <text x="0" y="112" fill="#999999" font-size="11" text-anchor="middle">Anatomia e volumes</text>
+                    </g>
+
+                    <!-- Seta 2 -> 3 -->
+                    <path d="M 465 115 L 515 115" stroke="#ea7600" stroke-width="2.5"/>
+                    <polygon points="515,110 525,115 515,120" fill="#ea7600"/>
+
+                    <!-- Etapa 3: Detalhamento Fino + Brush -->
+                    <g transform="translate(625, 120)">
+                        <path d="M -46 -25 C -50 -68, 50 -68, 46 -25 C 44 12, 33 34, 24 52 L -24 52 C -33 34, -44 12, -46 -25 Z" fill="url(#argilaGrad)"/>
+                        <!-- Detalhes de expressao e texturas -->
+                        <path d="M -32 -24 Q -15 -34, 0 -21 Q 15 -34, 32 -24" fill="none" stroke="#2b0e01" stroke-width="3.5" stroke-linecap="round"/>
+                        <ellipse cx="-18" cy="-14" rx="7" ry="4" fill="#2b0e01"/>
+                        <ellipse cx="18" cy="-14" rx="7" ry="4" fill="#2b0e01"/>
+                        <path d="M -8 -15 L -5 6 L 0 9 L 5 6 L 8 -15" fill="none" stroke="#ffd7b0" stroke-width="2"/>
+                        <path d="M -20 22 Q 0 30, 20 22" fill="none" stroke="#2b0e01" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M -14 34 Q 0 38, 14 34" fill="none" stroke="#ffd7b0" stroke-width="1.5" opacity="0.7"/>
+                        <!-- Simbolo de Brush do Blender -->
+                        <circle cx="34" cy="-36" r="16" fill="none" stroke="#00d4ff" stroke-width="1.8"/>
+                        <circle cx="34" cy="-36" r="3" fill="#00d4ff"/>
+                        <text x="0" y="95" fill="#e0e0e0" font-size="13" font-weight="bold" text-anchor="middle">3. Detalhamento Fino</text>
+                        <text x="0" y="112" fill="#999999" font-size="11" text-anchor="middle">Esculpido com Brushes</text>
+                    </g>
+                </svg>
+                <p class="legenda-ilustracao">Evolução da Escultura Digital no <em>Sculpt Mode</em> do Blender: da blocagem inicial até o refinamento com pincéis digitais.</p>
+            </div>
+        </section>
+
+        <section>
+            <h3>Conceito Visual e Processo Criativo</h3>
+            <p>Todo personagem ou criatura nasce de um <strong>Conceito Visual (Concept Art)</strong>, onde se define a personalidade, o ambiente em que vive e sua história. O processo criativo segue etapas bem definidas:</p>
+
+            <div class="etapas-grid">
+                <div class="etapa-card">
+                    <h4>1. Blocagem (Blocking)</h4>
+                    <p>Criação das formas principais e proporções gerais usando formas primitivas simples, garantindo que a silhueta funcione de todos os ângulos.</p>
+                </div>
+
+                <div class="etapa-card">
+                    <h4>2. Formas Secundárias</h4>
+                    <p>Definição de musculatura, dobras de roupas, estrutura óssea e volumes anatômicos que dão peso e credibilidade ao modelo.</p>
+                </div>
+
+                <div class="etapa-card">
+                    <h4>3. Detalhamento Fino</h4>
+                    <p>Adição de poros, rugas, escamas, cicatrizes e texturas de superfície utilizando pincéis específicos e alta subdivisão de malha.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3>Principais Ferramentas do Sculpt Mode no Blender</h3>
+            <p>Para transformar um bloco simples em uma escultura rica em detalhes, o artista utiliza recursos essenciais dentro do Blender:</p>
+            <ul>
+                <li><strong>Draw / Clay Strips:</strong> Adicionam volume à malha como se estivessem aplicando tiras de argila sobre a superfície.</li>
+                <li><strong>Grab (Mover):</strong> Permite puxar e ajustar grandes regiões da malha para corrigir proporções e silhueta rapidamente.</li>
+                <li><strong>Smooth (Suavizar):</strong> Nivela imperfeições e suaviza a transição entre os polígonos esculpidos.</li>
+                <li><strong>Crease (Vinco):</strong> Cria sulcos profundos e linhas marcadas, ideal para rugas, dobras de pele e divisões de armaduras.</li>
+                <li><strong>Dyntopo (Topologia Dinâmica) e Remesh:</strong> Reorganizam e aumentam a quantidade de polígonos automaticamente onde o pincel passa, permitindo detalhes minuciosos sem travar o projeto.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Desenvolvimento de Personagens e Criação de Criaturas</h3>
+            <p>Na criação de <strong>personagens</strong>, o foco está na anatomia humana ou estilizada, expressividade facial e silhueta marcante, comunicando a personalidade apenas pela postura e traços do rosto.</p>
+            <p>Já na <strong>criação de criaturas</strong> e monstros para jogos e filmes, os artistas combinam anatomias de diferentes animais reais (como répteis, felinos, aves e insetos) para garantir que seres fantásticos pareçam biologicamente convincentes e funcionais.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projeto Integrador - Portal da Modelagem 3D © 2026</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

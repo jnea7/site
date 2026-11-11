@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malha (Mesh) - Portal 3D</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Portal <span>3D</span></div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="modelagem3d.html">Modelagem & IA</a></li>
+                <li><a href="fundamentos.html">Fundamentos</a></li>
+                <li><a href="mesh.html" class="ativo">Malha (Mesh)</a></li>
+                <li><a href="formas.html">Formas Primárias</a></li>
+                <li><a href="escultura.html">Escultura Digital</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>O que é uma Malha (Mesh)?</h2>
+            <p>No contexto do Blender e da Computação Gráfica, a palavra inglesa <strong>Mesh</strong> significa <strong>Malha</strong>. Uma malha é a estrutura geométrica que forma a "casca" de um modelo 3D. Podemos imaginá-la como uma cerca de arame ou uma rede de pesca que dá forma a um objeto.</p>
+
+            <h3>Os 3 Elementos Principais da Malha</h3>
+            <div class="grid-cards">
+                <div class="card">
+                    <h3>Vértices (Vertices)</h3>
+                    <p>São pontos individuais localizados no espaço 3D (coordenadas X, Y e Z). Eles funcionam como os "nós" da estrutura geométrica.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Arestas (Edges)</h3>
+                    <p>São linhas retas que conectam dois vértices entre si, formando o contorno e o esqueleto do objeto.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Faces (Faces)</h3>
+                    <p>São superfícies planas preenchidas e delimitadas por três ou mais arestas conectadas, dando visibilidade sólida ao modelo.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Exemplo Prático: O Cubo no Blender</h2>
+            <p>No Blender, quando utilizamos o comando <strong>Add &rarr; Mesh &rarr; Cube</strong>, criamos uma malha primitiva em formato de cubo. Essa estrutura básica é composta exatamente por:</p>
+            <ul style="margin-left: 20px; margin-bottom: 1rem;">
+                <li><strong>8 Vértices:</strong> os 8 cantos do cubo.</li>
+                <li><strong>12 Arestas:</strong> as 12 linhas que ligam os cantos.</li>
+                <li><strong>6 Faces:</strong> os 6 lados quadrados que fecham o volume.</li>
+            </ul>
+            
+            <img src="imagens/cubo-mesh.png" alt="Estrutura de Vértices, Arestas e Faces de um Cubo no Blender" class="img-ilustrativa">
+            <p style="text-align: center; font-size: 0.9rem; color: #aaa;"><em>Clique na imagem acima para ampliar.</em></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projeto Integrador - Portal da Modelagem 3D &copy; 2026</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
